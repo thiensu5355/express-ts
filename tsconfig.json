@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+      "module": "commonjs",
+      "target": "es5",
+      "moduleResolution": "node",
+      "outDir": "dist",
+      "allowJs": true,
+      "typeRoots": [
+          "node_modules/@types"
+      ],
+      "lib": [
+          "dom",
+          "es2017"
+      ],
+      "watch": true,
+      "baseUrl": "./src",
+      "paths": {
+          "@/*": [
+              "./*"
+          ]
+      },
+      "types": [
+          "node",
+          "lodash",
+          "express"
+      ]
+  },
+  "exclude": [
+      "node_modules",
+      "dist"
+  ],
+  "files": [
+      "./bin/www.ts"
+  ]
+}
