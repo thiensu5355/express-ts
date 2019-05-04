@@ -1,35 +1,43 @@
 {
-  "compilerOptions": {
-      "module": "commonjs",
-      "target": "es5",
-      "moduleResolution": "node",
-      "outDir": "dist",
-      "allowJs": true,
-      "typeRoots": [
-          "node_modules/@types"
-      ],
-      "lib": [
-          "dom",
-          "es2017"
-      ],
-      "watch": true,
-      "baseUrl": "./src",
-      "paths": {
-          "@/*": [
-              "./*"
-          ]
-      },
-      "types": [
-          "node",
-          "lodash",
-          "express"
-      ]
-  },
-  "exclude": [
-      "node_modules",
-      "dist"
-  ],
-  "files": [
-      "./bin/www.ts"
-  ]
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "moduleResolution": "node",
+        "outDir": "dist",
+        "allowJs": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "noImplicitReturns": true,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "forceConsistentCasingInFileNames": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "lib": [
+            "dom",
+            "es2017"
+        ],
+        "baseUrl": "./src",
+        "paths": {
+            "@/*": [
+                "./*"
+            ]
+        },
+        "types": [
+            "node",
+            "lodash",
+            "express"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+        "webpack"
+    ],
+    "files": [
+        "./bin/www.ts"
+    ]
 }

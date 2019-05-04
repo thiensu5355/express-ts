@@ -1,6 +1,7 @@
 import * as express from 'express';
 import { createServer, Server } from 'http';
-import userRoute from './routes';
+import { ApiRoutes } from './routes/api_router';
+import { UserRoutes }  from './routes/user_router';
 
 export default class ServerExpress {
     public app: express.Application;
@@ -17,6 +18,7 @@ export default class ServerExpress {
     }
 
     private routes = (): void => {
-        this.app.use('/', userRoute);
+        this.app.use(ApiRoutes.path, ApiRoutes.router);
+        this.app.use(UserRoutes.path, UserRoutes.router);
     }
 }
